@@ -1,0 +1,38 @@
+title: 'Linux / Solaris - Whole-Disk Shred, dd From /dev/random or Forced SysRq Reboot'
+id: adb70a79-0c04-4684-b7fd-79f15dc02457
+status: experimental
+description: |
+  Detects the destructive steps of AWFULSHRED (Linux) and SOLOSHRED (Solaris): shred or dd writing random data
+  over whole disks, and a forced reboot through /proc/sysrq-trigger. These bash wipers were part of the April 2022
+  attack on the Ukrainian energy company.
+references:
+  - https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.impact
+  - attack.t1561.002
+  - attack.t1485
+  - attack.t1529
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection_shred:
+    Image|endswith: '/shred'
+    CommandLine|contains:
+      - '/dev/sd'
+      - '/dev/nvme'
+      - '/dev/vd'
+      - '/dev/dsk/'
+  selection_dd:
+    Image|endswith: '/dd'
+    CommandLine|contains|all:
+      - 'if=/dev/random'
+      - 'of=/dev/'
+  selection_sysrq:
+    CommandLine|contains: 'sysrq-trigger'
+  condition: 1 of selection_*
+falsepositives:
+  - Secure decommissioning of disks (should be planned and done offline)
+level: critical

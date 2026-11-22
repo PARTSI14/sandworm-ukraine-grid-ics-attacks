@@ -1,0 +1,376 @@
+{
+  "name": "Sandworm vs Ukraine grid: Enterprise techniques 2016-2022",
+  "versions": {
+    "attack": "20",
+    "navigator": "5.0.0",
+    "layer": "4.5"
+  },
+  "domain": "enterprise-attack",
+  "description": "IT-side (Enterprise) techniques around the three Sandworm grid attacks. Official ATT&CK v20.1 mappings for C0034, S0693 (CaddyWiper), S1072 and S0604, plus techniques mapped by Stelios Partsinevelos from ESET's April 2022 report (marked 'ESET:' in comments). Score = number of the three attacks.",
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true,
+    "showAggregateScores": false,
+    "countUnscored": false,
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T1012",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1016",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1018",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1021.004",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072). Source: ESET: ORCSHRED spreads over SSH.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "lateral-movement"
+    },
+    {
+      "techniqueID": "T1027",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "stealth"
+    },
+    {
+      "techniqueID": "T1036.004",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "stealth"
+    },
+    {
+      "techniqueID": "T1036.005",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072). Source: ESET: ARGUEPATCH: trojanized IDA Pro remote debugger.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "stealth"
+    },
+    {
+      "techniqueID": "T1041",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "exfiltration"
+    },
+    {
+      "techniqueID": "T1046",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072). Source: ATT&CK S0604, ESET: ORCSHRED scans /24 subnets for SSH.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1053.003",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072). Source: ESET: ORCSHRED cron job.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1053.005",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034, ESET: Industroyer2 and CaddyWiper launched by scheduled tasks.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1057",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0693 (CaddyWiper), ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1059.001",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1071.001",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "command-and-control"
+    },
+    {
+      "techniqueID": "T1078",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1082",
+      "score": 3,
+      "color": "#bf360c",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0604, ATT&CK S0693 (CaddyWiper).",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1083",
+      "score": 3,
+      "color": "#bf360c",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0604, ATT&CK S0693 (CaddyWiper).",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T1090.003",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "command-and-control"
+    },
+    {
+      "techniqueID": "T1095",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "command-and-control"
+    },
+    {
+      "techniqueID": "T1105",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "command-and-control"
+    },
+    {
+      "techniqueID": "T1106",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0693 (CaddyWiper).",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1110.003",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072). Source: ESET: ORCSHRED tries a credential list over SSH.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "credential-access"
+    },
+    {
+      "techniqueID": "T1140",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "stealth"
+    },
+    {
+      "techniqueID": "T1222.001",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0693 (CaddyWiper).",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "defense-impairment"
+    },
+    {
+      "techniqueID": "T1484.001",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034, ESET: CaddyWiper deployed via GPO.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1485",
+      "score": 3,
+      "color": "#bf360c",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034, ATT&CK S0604, ATT&CK S0693 (CaddyWiper).",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1489",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072). Source: ATT&CK S0604, ESET: AWFULSHRED/SOLOSHRED stop SSH, HTTP and Oracle services, Industroyer2 kills an operational process.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1499.004",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1505.003",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "persistence"
+    },
+    {
+      "techniqueID": "T1529",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072). Source: ESET: AWFULSHRED forces reboot via SysRq.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1543.002",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1543.003",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1554",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "persistence"
+    },
+    {
+      "techniqueID": "T1561.002",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0693 (CaddyWiper), ESET: CaddyWiper/AWFULSHRED wipe partition tables and disks.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T1570",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "lateral-movement"
+    },
+    {
+      "techniqueID": "T1572",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034, ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "command-and-control"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffcc80",
+      "#bf360c"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "Used in 3 of the 3 attacks",
+      "color": "#bf360c"
+    },
+    {
+      "label": "2 of 3",
+      "color": "#fb8c00"
+    },
+    {
+      "label": "1 of 3",
+      "color": "#ffcc80"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "Author",
+      "value": "Stelios Partsinevelos"
+    },
+    {
+      "name": "Sources",
+      "value": "MITRE ATT&CK v20.1 (S0604, S1072, C0034, S0693), ESET, Mandiant"
+    }
+  ],
+  "showTacticRowBackground": false,
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

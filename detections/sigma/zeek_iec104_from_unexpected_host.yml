@@ -1,0 +1,31 @@
+title: 'OT Network - IEC 60870-5-104 Traffic From a Host Outside the SCADA Allow-List'
+id: 7238b66f-3b5c-462b-9126-77e8afbf725a
+status: experimental
+description: |
+  Detects IEC-104 connections (TCP 2404) from any host that is not an approved SCADA / control server. Both
+  Industroyer2 and the Oct 2022 MicroSCADA attack sent commands to substation devices over IEC-104. REPLACE the
+  example addresses in the filter with your real SCADA servers before use.
+references:
+  - https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/
+  - https://cloud.google.com/blog/topics/threat-intelligence/sandworm-disrupts-power-ukraine-operational-technology
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.impair-process-control
+  - attack.t1692.001
+  - attack.command-and-control
+  - attack.t0869
+logsource:
+  product: zeek
+  service: conn
+detection:
+  selection:
+    id.resp_p: 2404
+  filter_scada_servers:
+    id.orig_h:
+      - '10.0.0.10'
+      - '10.0.0.11'
+  condition: selection and not filter_scada_servers
+falsepositives:
+  - New SCADA servers not yet in the allow-list (keep the list current)
+level: high

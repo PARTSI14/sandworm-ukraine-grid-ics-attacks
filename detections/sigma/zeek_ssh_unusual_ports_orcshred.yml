@@ -1,0 +1,31 @@
+title: 'Network - SSH Attempts on Unusual Ports Used by ORCSHRED (2468, 24687, 522)'
+id: 94651b61-6509-47f6-b63f-2155924cb3aa
+status: experimental
+description: |
+  Detects connections to TCP 2468, 24687 or 522. ORCSHRED, the worm that spread the 2022 Linux wipers, scanned
+  /24 subnets and tried SSH with a credential list on ports 22, 2468, 24687 and 522. Traffic to the three unusual ports
+  inside OT or server networks deserves a look.
+references:
+  - https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.lateral-movement
+  - attack.t1021.004
+  - attack.credential-access
+  - attack.t1110.003
+  - attack.discovery
+  - attack.t1046
+logsource:
+  product: zeek
+  service: conn
+detection:
+  selection:
+    id.resp_p:
+      - 2468
+      - 24687
+      - 522
+  condition: selection
+falsepositives:
+  - Applications that legitimately use these ports (verify and allow-list)
+level: medium

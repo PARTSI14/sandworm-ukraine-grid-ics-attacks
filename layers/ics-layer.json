@@ -1,0 +1,336 @@
+{
+  "name": "Sandworm vs Ukraine grid: ICS techniques 2016-2022",
+  "versions": {
+    "attack": "20",
+    "navigator": "5.0.0",
+    "layer": "4.5"
+  },
+  "domain": "ics-attack",
+  "description": "ICS techniques in three Sandworm attacks on Ukrainian power: Industroyer (Dec 2016), Industroyer2 (Apr 2022) and the MicroSCADA living-off-the-land attack (Oct 2022). Official MITRE ATT&CK for ICS v20.1 mappings for S0604, S1072 and C0034, plus four techniques from Mandiant's Appendix E for the Oct 2022 event. Score = number of the three attacks that used the technique.",
+  "sorting": 0,
+  "layout": {
+    "layout": "side",
+    "showName": true,
+    "showID": true,
+    "showAggregateScores": false,
+    "countUnscored": false,
+    "expandedSubtechniques": "annotated"
+  },
+  "hideDisabled": false,
+  "techniques": [
+    {
+      "techniqueID": "T0800",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T0801",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072). Source: ATT&CK S0604, ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "collection"
+    },
+    {
+      "techniqueID": "T0802",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072). Source: ATT&CK S0604, ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "collection"
+    },
+    {
+      "techniqueID": "T0806",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072). Source: ATT&CK S0604, ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impair-process-control"
+    },
+    {
+      "techniqueID": "T0809",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0604, Mandiant Appendix E.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T0813",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T0814",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T0815",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T0816",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T0827",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T0829",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T0831",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK S0604, Mandiant Appendix E.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T0832",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T0836",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Apr 2022 Industroyer2 (S1072). Source: ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impair-process-control"
+    },
+    {
+      "techniqueID": "T0837",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "impact"
+    },
+    {
+      "techniqueID": "T0840",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T0846",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T0846.001",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T0871",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: Mandiant Appendix E.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T0872",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: Mandiant Appendix E.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "evasion"
+    },
+    {
+      "techniqueID": "T0881",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072). Source: ATT&CK S0604, ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T0884",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "command-and-control"
+    },
+    {
+      "techniqueID": "T0888",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072). Source: ATT&CK S0604, ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "discovery"
+    },
+    {
+      "techniqueID": "T0894",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "evasion"
+    },
+    {
+      "techniqueID": "T0895",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1691.001",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T1691.002",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T1692.001",
+      "score": 3,
+      "color": "#bf360c",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Apr 2022 Industroyer2 (S1072); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034, ATT&CK S0604, ATT&CK S1072.",
+      "enabled": true,
+      "showSubtechniques": true
+    },
+    {
+      "techniqueID": "T1695.001",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Dec 2016 Industroyer (S0604). Source: ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "inhibit-response-function"
+    },
+    {
+      "techniqueID": "T1701.002",
+      "score": 2,
+      "color": "#fb8c00",
+      "comment": "Used in: Dec 2016 Industroyer (S0604); Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034, ATT&CK S0604.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    },
+    {
+      "techniqueID": "T1701.004",
+      "score": 1,
+      "color": "#ffcc80",
+      "comment": "Used in: Oct 2022 MicroSCADA attack (C0034). Source: ATT&CK C0034.",
+      "enabled": true,
+      "showSubtechniques": true,
+      "tactic": "execution"
+    }
+  ],
+  "gradient": {
+    "colors": [
+      "#ffcc80",
+      "#bf360c"
+    ],
+    "minValue": 1,
+    "maxValue": 3
+  },
+  "legendItems": [
+    {
+      "label": "Used in 3 of the 3 attacks",
+      "color": "#bf360c"
+    },
+    {
+      "label": "2 of 3",
+      "color": "#fb8c00"
+    },
+    {
+      "label": "1 of 3",
+      "color": "#ffcc80"
+    }
+  ],
+  "metadata": [
+    {
+      "name": "Author",
+      "value": "Stelios Partsinevelos"
+    },
+    {
+      "name": "Sources",
+      "value": "MITRE ATT&CK v20.1 (S0604, S1072, C0034, S0693), ESET, Mandiant"
+    }
+  ],
+  "showTacticRowBackground": false,
+  "selectTechniquesAcrossTactics": true,
+  "selectSubtechniquesWithParent": false,
+  "selectVisibleTechniques": false
+}

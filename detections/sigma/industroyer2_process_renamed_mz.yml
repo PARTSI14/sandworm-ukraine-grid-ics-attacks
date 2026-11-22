@@ -1,0 +1,26 @@
+title: 'Windows OT Host - Executable Renamed With .MZ Extension (Industroyer2 behaviour)'
+id: 1c6382b3-5681-4b91-b848-5789eb54485f
+status: experimental
+description: |
+  Detects a file written with the extension ".exe.MZ". Before connecting to substation devices, Industroyer2
+  terminated a legitimate operations process and renamed its executable by appending ".MZ" so it could not restart
+  and interfere. Source: file event telemetry on SCADA / OT Windows hosts.
+references:
+  - https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.inhibit-response-function
+  - attack.t0881
+  - attack.impact
+  - attack.t1489
+logsource:
+  category: file_event
+  product: windows
+detection:
+  selection:
+    TargetFilename|endswith: '.exe.MZ'
+  condition: selection
+falsepositives:
+  - None expected
+level: critical

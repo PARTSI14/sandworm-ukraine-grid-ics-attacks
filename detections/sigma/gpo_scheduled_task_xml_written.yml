@@ -1,0 +1,28 @@
+title: 'Active Directory - Group Policy Scheduled Task (ScheduledTasks.xml) Created or Modified in SYSVOL'
+id: c71b0358-20e2-41f5-80d2-e1531ea2a47c
+status: experimental
+description: |
+  Detects a write to a GPO ScheduledTasks.xml file in SYSVOL. Pushing a scheduled task through Group Policy is how
+  Sandworm launched CaddyWiper across a domain in both 2022 attacks. Every change should match a change ticket.
+  Source: file creation telemetry on domain controllers.
+references:
+  - https://cloud.google.com/blog/topics/threat-intelligence/sandworm-disrupts-power-ukraine-operational-technology
+  - https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.privilege-escalation
+  - attack.t1484.001
+  - attack.execution
+  - attack.t1053.005
+logsource:
+  category: file_event
+  product: windows
+detection:
+  selection:
+    TargetFilename|contains: '\SYSVOL\'
+    TargetFilename|endswith: '\ScheduledTasks\ScheduledTasks.xml'
+  condition: selection
+falsepositives:
+  - Administrators deploying scheduled tasks through GPO (correlate with change management)
+level: medium

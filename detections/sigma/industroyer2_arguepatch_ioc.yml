@@ -1,0 +1,28 @@
+title: 'Windows - Industroyer2 and ARGUEPATCH File Names Executed (IOC)'
+id: 613a2ab5-da3c-4ca1-b552-bb9fd46c81b6
+status: experimental
+description: |
+  IOC rule for the April 2022 attack: Industroyer2 ran as 108_100.exe from a scheduled task, and ARGUEPATCH
+  (zrada.exe, a trojanized IDA Pro remote debugger) loaded CaddyWiper. File names are easy to change: use the SHA-1
+  hashes in the README and the behaviour rules as well.
+references:
+  - https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.execution
+  - attack.t1053.005
+  - attack.stealth
+  - attack.t1036.005
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith:
+      - '\108_100.exe'
+      - '\zrada.exe'
+  condition: selection
+falsepositives:
+  - None expected
+level: critical

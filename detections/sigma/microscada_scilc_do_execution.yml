@@ -1,0 +1,28 @@
+title: 'MicroSCADA - scilc.exe Executes an External SCIL Program (-do)'
+id: 916ca752-88d4-46b4-afa3-2ebad72610a3
+status: experimental
+description: |
+  Detects the native MicroSCADA utility scilc.exe running a SCIL program file with "-do". In October 2022
+  Sandworm used "scilc.exe -do pack\scil\s1.txt" from a mounted ISO to send commands that likely opened
+  substation circuit breakers. Mandiant recommends monitoring this exact pattern. Living off the land: no malware
+  was needed on the SCADA host.
+references:
+  - https://cloud.google.com/blog/topics/threat-intelligence/sandworm-disrupts-power-ukraine-operational-technology
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.execution
+  - attack.t0871
+  - attack.t0894
+  - attack.t1218
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    Image|endswith: '\scilc.exe'
+    CommandLine|contains: '-do'
+  condition: selection
+falsepositives:
+  - Engineers running documented SCIL maintenance programs (should be rare and scheduled)
+level: high

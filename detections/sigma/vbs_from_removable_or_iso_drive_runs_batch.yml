@@ -1,0 +1,31 @@
+title: 'Windows - Script From a Non-System Drive Launches a Hidden Batch File (ISO / CD-ROM autorun chain)'
+id: a7c22ff8-7c50-4ebd-a4c9-0b3d84a41090
+status: experimental
+description: |
+  Detects wscript or cscript running a VBS file from a drive other than C: that starts cmd.exe with a .bat file.
+  In October 2022 Sandworm mounted a.iso as a virtual CD-ROM on the SCADA VM; lun.vbs ran n.bat hidden, which ran
+  scilc.exe. On SCADA hosts, scripts should not run from mounted media.
+references:
+  - https://cloud.google.com/blog/topics/threat-intelligence/sandworm-disrupts-power-ukraine-operational-technology
+author: Stelios Partsinevelos
+date: 2026-11-22
+tags:
+  - attack.execution
+  - attack.t1059.005
+  - attack.t0895
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection_parent:
+    ParentImage|endswith:
+      - '\wscript.exe'
+      - '\cscript.exe'
+    ParentCommandLine|re: '(?i)[d-z]:\\[^ ]*\.vbs'
+  selection_child:
+    Image|endswith: '\cmd.exe'
+    CommandLine|contains: '.bat'
+  condition: all of selection_*
+falsepositives:
+  - Installers on physical media in IT environments (scope the rule to OT / SCADA hosts)
+level: high
